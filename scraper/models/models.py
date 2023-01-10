@@ -1,17 +1,15 @@
 from typing import List
 
-from enums.custome_types import Quality
-
 
 class Movie():
 
-    def __init__(self, title: str, description: str, rating: float, gener: str, picture_url: str, release_year: int,
-                 language: str, aviliable_quality: List[Quality], likes: float, yifi_url: str, magnet_link: str):
+    def __init__(self, title: str, description: str, rating: float, genre: str, picture_url: str, release_year: int,
+                 language: str, aviliable_quality: List[str], likes: float, yifi_url: str, magnet_link: str):
 
         self.title = title
         self.description = description
         self.rating = rating
-        self.gener = gener
+        self.genre = genre
         self.picture_url = picture_url
         self.release_year = release_year
         self.language = language
@@ -23,11 +21,15 @@ class Movie():
     def print(self):
         print("*" * 30)
         print("Title: " + self.title)
-        print("Rating: " + str(self.rating))
+        print("YIFI url: " + self.yifi_url)
+        print("Picture: " + self.picture_url)
         print("Year: " + str(self.release_year))
-        print("Gener: " + self.gener)
+        print('\n')
+        print("Aviliable qualities: " + str(self.aviliable_quality))
+        print("Rating: " + str(self.rating))
+        print("Gener: " + self.genre)
         print("Language: " + self.language)
         print("Likes: " + str(self.likes))
-        print("Picture: " + self.picture_url)
-        print("YIFI url: " + self.yifi_url)
         print("Mangent link: " + self.magnet_link)
+        print('\n')
+        print("Description: " + self.description)
